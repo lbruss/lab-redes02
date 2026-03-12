@@ -1,4 +1,4 @@
-https://img.shields.io/github/license/lbruss/lab-redes02
+![GitHub License](https://img.shields.io/github/license/lbruss/lab-redes02)
 
 # # Laboratório de Redes 02 - Projeto IoT com Arduino – Documentação Parcial (Dia 1 – 11/03/2026)
 
