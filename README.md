@@ -2,10 +2,6 @@
 
 # **Laboratório de IoT com Arduino – Documentação Parcial (Dias 1 e 2 - 11,13/03/2026)**
 
-# **Laboratório de IoT com Arduino – Documentação Parcial (Dias 1 e 2)**
-
-Projeto desenvolvido na disciplina de IoT/Robótica do SENAC.
-
 **Integrantes do grupo:**
 
 *   Bruss Loza
@@ -299,8 +295,7 @@ O Arduino agora funciona como um **servidor web completo**, acessível por qualq
 
 ***
 
-
-
+![](file:///C:/Users/Bruss/Pictures/ProjetoIoT/Imagem2.jpeg)
 
 
 
