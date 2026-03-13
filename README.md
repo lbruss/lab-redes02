@@ -33,10 +33,10 @@ Iniciar um projeto IoT com Arduino, envolvendo:
 ### Placas e Módulos
 
 *   **Arduino UNO R3**
-![](Imagem7.jpeg)
+![](imagens/Imagem7.jpeg)
 
 *   **Ethernet Shield W5100**
-![](Imagem6.jpeg)
+![](imagens/Imagem6.jpeg)
 
 ### Sensores
 
@@ -53,7 +53,7 @@ Iniciar um projeto IoT com Arduino, envolvendo:
 *   2 Cabos de rede
 *   Roteador Wi-Fi
 
-![](Imagem2.jpeg)
+![](imagens/Imagem2.jpeg)
 
 ***
 
@@ -64,7 +64,7 @@ A interface do **Arduino IDE 2.2.6** foi aberta e explicada:
 *   `setup()` → roda uma vez
 *   `loop()` → roda para sempre
 
-![](Imagem3.jpeg)
+![](imagens/Imagem3.jpeg)
 
 Primeiro código:
 
@@ -86,9 +86,9 @@ O código foi testado:
 *   No simulador Tinkercad
 *   No Arduino físico
 
-![](Imagem4.jpeg)
+![](imagens/Imagem4.jpeg)
 
-![](Imagem5.jpeg)
+![](imagens/Imagem5.jpeg)
 
 O Arduino enviou repetidamente:
 
@@ -104,7 +104,7 @@ A rede foi montada assim:
 *   PC → Roteador
 *   Roteador → Internet (rede SENAC)
 
-![](Imagem8.jpeg)
+![](imagens/Imagem8.jpeg)
 
 ***
 
@@ -119,11 +119,11 @@ Serial.println(Ethernet.gatewayIP());
 Serial.println(Ethernet.dnsServerIP());
 ```
 
-![](Imagem9.jpeg)
+![](imagens/Imagem9.jpeg)
 
 Saída no Serial Monitor:
 
-![](Imagem10.jpeg)
+![](imagens/Imagem10.jpeg)
 
 ***
 
@@ -134,7 +134,7 @@ Foi feito:
 *   Reserva de IP (para o IP do Arduino nunca mudar)
 *   Teste de ping via CMD
 
-![](Imagem11.jpeg)
+![](imagens/Imagem11.jpeg)
 
 O Arduino respondeu com 0% de perda.
 
@@ -166,7 +166,7 @@ Configurações feitas:
 *   Extensão Live Server instalada
 *   Criação de `index.html`
 
-![](Imagem12.jpeg)
+![](imagens/Imagem12.jpeg)
 
 Código inicial:
 
@@ -191,7 +191,7 @@ Código inicial:
 </html>
 ```
 
-![](Imagem13.jpeg)
+![](imagens/Imagem13.jpeg)
 
 ***
 
@@ -199,8 +199,7 @@ Código inicial:
 
 Código inicial no Arduino:
 
-![](bannergh2.png)
-→ **Aqui se encaixaria melhor a Imagem 14**
+![](imagens/Imagem14.jpeg)
 
 Explicações:
 
@@ -212,8 +211,7 @@ Explicações:
 
 # 11. Serial Monitor Mostrando IP
 
-![](bannergh2.png)
-→ **Aqui se encaixaria melhor a Imagem 15**
+![](imagens/Imagem15.jpeg)
 
 O Arduino exibiu:
 
@@ -234,8 +232,7 @@ HTML AQUI
 )HTML";
 ```
 
-![](bannergh2.png)
-→ **Aqui se encaixaria melhor a Imagem 16**
+![](imagens/Imagem16.jpeg)
 
 ***
 
@@ -243,8 +240,7 @@ HTML AQUI
 
 Vocês copiaram o HTML do VS Code e colaram dentro do R"HTML()HTML".
 
-![](bannergh2.png)
-→ **Aqui se encaixaria melhor a Imagem 17**
+![](imagens/Imagem17.jpeg)
 
 Isso permite ao Arduino enviar a página real para navegadores.
 
@@ -252,8 +248,7 @@ Isso permite ao Arduino enviar a página real para navegadores.
 
 # 14. Programando o void loop() (Servidor HTTP Completo)
 
-![](bannergh2.png)
-→ **Aqui se encaixaria melhor a Imagem 18**
+![](imagens/Imagem18.jpeg)
 
 Código explicado:
 
@@ -267,8 +262,7 @@ Código explicado:
 
 # 15. Resultado Final do Dia 2: SUCESSO
 
-![](bannergh2.png)
-→ **Aqui se encaixaria melhor a Imagem 19**
+![](imagens/Imagem19.jpeg)
 
 O grupo digitou o IP do Arduino no:
 
@@ -279,10 +273,10 @@ E a página **Hello Arduino** abriu nos dois dispositivos.
 
 Isso confirma:
 
-* Servidor funcionando\
-* HTML funcionando\
-* Rede funcionando\
-* Arduino como Web Server\
+* Servidor funcionando
+* HTML funcionando
+* Rede funcionando
+* Arduino como Web Server
 * Código 100% correto
 
 ***
@@ -299,6 +293,6 @@ Até agora o grupo:
 *   enviou páginas HTML
 *   acessou a página pelo navegador
 
-O Arduino agora funciona como um **servidor web completo**, acessível por qualquer dispositivo na mesma rede.
+O Arduino agora funciona como um **servidor web**, acessível por qualquer dispositivo na mesma rede.
 
 ***
