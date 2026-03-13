@@ -1,26 +1,30 @@
 ![GitHub License](https://img.shields.io/github/license/lbruss/lab-redes02)
 
-# Laboratório de Redes 02 - Projeto IoT com Arduino – Documentação Parcial (Dia 1 – 11/03/2026)
-
-***
+# **Laboratório de IoT com Arduino – Documentação Parcial (Dias 1 e 2 - 11,13/03/2026)**
 
 **Integrantes do grupo:**
 
 *   Bruss Loza
+*   Daniel
 *   Ezequiel
-*   Daniel Vieira
+
+***
+
+# **Dia 1 – 11/03/2026**
 
 ***
 
 # 1. Objetivo (Parcial)
 
-Iniciar o desenvolvimento de um projeto envolvendo **Arduino e Internet das Coisas (IoT)**, realizando:
+Iniciar um projeto IoT com Arduino, envolvendo:
 
-1.  Identificação e preparação dos componentes
-2.  Conexão física da placa e módulos
-3.  Configuração de rede (LAN, DHCP, Reserva de IP)
-4.  Testes de comunicação entre computador ↔ Arduino
-5.  Primeiros códigos com comunicação serial e Ethernet
+*   montagem de rede local
+*   configuração de roteador
+*   primeiros códigos de comunicação serial
+*   utilização do Ethernet Shield
+*   obtenção de IP via DHCP
+*   testes de comunicação na rede
+*   preparação para servidor web
 
 ***
 
@@ -28,31 +32,43 @@ Iniciar o desenvolvimento de um projeto envolvendo **Arduino e Internet das Cois
 
 ### Placas e Módulos
 
-*   **Arduino UNO R3** – placa principal do projeto (microcontrolador ATmega328P)  
-![Imagem7](https://github.com/user-attachments/assets/ff90aa46-99ad-4986-911c-0ddb2cc9b33c)
+*   **Arduino UNO R3**\
 
-*   **Ethernet Shield W5100** – módulo para conectar o Arduino à rede via cabo  
-![Imagem6](https://github.com/user-attachments/assets/7390ad2c-d002-47f7-8c0b-b4c2f74ca438)
 
-### Cabos e Conexões
 
-*   Cabo USB Tipo B (para programar o Arduino)
-*   Cabos de rede (Ethernet)
-*   Roteador Wi‑Fi com portas LAN e WAN
+*   **Ethernet Shield W5100**\
+    → **Aqui se encaixaria melhor a Imagem 6**
+
+### Sensores
+
+*   HC-SR04
+*   DHT11
+*   LDR
+
+### Acessórios
+
+*   Protoboard
+*   LEDs
+*   Cabos jumper
+*   Cabo USB-B
+*   2 Cabos de rede
+*   Roteador Wi-Fi
+
+
+→ **Aqui se encaixaria melhor a Imagem 1 e a Imagem 2**
 
 ***
 
-# 3. Programação Inicial – Arduino IDE
+# 3. Primeiros Testes no Arduino IDE
 
-Foi aberta e utilizada a interface do **Arduino IDE 2.2.6**.  
-A IDE possui duas funções principais em todo código:
+A interface do **Arduino IDE 2.2.6** foi aberta e explicada:
 
-*   `setup()` – executa 1 vez ao iniciar
-*   `loop()` – executa repetidamente
+*   `setup()` → roda uma vez
+*   `loop()` → roda para sempre
 
-![Imagem3](https://github.com/user-attachments/assets/379069da-f966-4ed2-8a92-d92a34c9fb97)
+→ **Aqui se encaixaria melhor a Imagem 3**
 
-Primeiro código executado:
+Primeiro código:
 
 ```cpp
 void setup() {
@@ -63,57 +79,38 @@ void setup() {
 void loop() {}
 ```
 
-*Esse código serve para testar a comunicação entre a placa e o computador via Serial Monitor.*
+***
+
+# 4. Teste no Tinkercad e no Arduino Real
+
+O código foi testado:
+
+*   No simulador Tinkercad
+*   No Arduino físico
+
+→ **Aqui se encaixaria melhor a Imagem 4 e a Imagem 5**
+
+O Arduino enviou repetidamente:
+
+    Hello World
 
 ***
 
-# 4. Primeiro Teste no Arduino + Simulação no Tinkercad
+# 5. Montagem da Rede IoT
 
-O mesmo código foi executado:
+A rede foi montada assim:
 
-*   no **Arduino real**
-*   no **Tinkercad** (simulação virtual do Arduino)
+*   Arduino + Ethernet Shield → Roteador
+*   PC → Roteador
+*   Roteador → Internet (rede SENAC)
 
-![Imagem4](https://github.com/user-attachments/assets/22b98c52-6242-483f-8e68-27e4fa5b6098)
-
-Depois, o Tinkercad foi fechado e não foi mais utilizado hoje.
-
-***
-
-# 5. Teste de Comunicação Serial Repetida
-
-Foi modificado o código para enviar repetidamente “Hello World”:
-
-```cpp
-void loop() {
-  Serial.println("Hello World");
-}
-```
-
-O Serial Monitor mostrou a saída contínua, confirmando funcionamento da porta serial.
-
-![Imagem5](https://github.com/user-attachments/assets/4a131c3b-2f20-48a0-9db0-d1dc8004ec52)
+→ **Aqui se encaixaria melhor a Imagem 8**
 
 ***
 
-# 6. Montagem de Rede Física – Arduino + Roteador + PC
+# 6. Código para Obter IP, Máscara, Gateway e DNS
 
-Nesta etapa:
-
-*   O **Ethernet Shield** foi encaixado no Arduino
-*   Cabo Ethernet conectou o Arduino ao roteador
-*   Outro cabo conectou o PC ao roteador
-*   O roteador foi conectado à **rede do SENAC** pela porta WAN
-
-![Imagem8](https://github.com/user-attachments/assets/be11bbf1-173d-4fbd-96c4-0dcba9857682)
-
-Essa estrutura permitiu iniciar a parte **IoT**, colocando o Arduino dentro da rede local.
-
-***
-
-# 7. Obtenção de IP, Máscara, Gateway e DNS (via DHCP)
-
-Foi carregado um código que exibe as informações de rede:
+Código executado:
 
 ```cpp
 Serial.println(Ethernet.localIP());
@@ -122,52 +119,177 @@ Serial.println(Ethernet.gatewayIP());
 Serial.println(Ethernet.dnsServerIP());
 ```
 
-![Imagem9](https://github.com/user-attachments/assets/db9a877b-57da-4b65-9b29-ee21ff22268d)
+→ **Aqui se encaixaria melhor a Imagem 9**
 
-O Arduino recebeu automaticamente um IP via DHCP do roteador.
+Saída no Serial Monitor:
 
-***
-
-# 8. Visualização das Configurações de Rede no Serial Monitor
-
-No Serial Monitor apareceram:
-
-*   IP do Arduino
-*   Máscara de sub-rede
-*   Gateway
-*   DNS
-
-![Imagem10](https://github.com/user-attachments/assets/8eedf45e-065f-4b0b-80f3-c2b336349123)
-
-Isso confirmou que o Arduino **entrou na rede** com sucesso.
+→ **Aqui se encaixaria melhor a Imagem 10**
 
 ***
 
-# 9. Reserva de IP no Roteador + Teste de Ping
+# 7. Configuração do Roteador + Ping
 
-Nesta etapa, no painel do roteador foi configurada uma **reserva DHCP** para que o Arduino sempre tenha o mesmo IP.
+Foi feito:
 
-Depois, no CMD do Windows, foi executado:
+*   Reserva de IP (para o IP do Arduino nunca mudar)
+*   Teste de ping via CMD
 
-    ping 192.168.0.100
+→ **Aqui se encaixaria melhor a Imagem 11**
 
-O Arduino respondeu a todos os pacotes, confirmando comunicação perfeita.
+O Arduino respondeu com 0% de perda.
 
-![Imagem11](https://github.com/user-attachments/assets/0eb3cd5c-f388-44f5-9847-ada86a6faca5)
+***
 
 ***
 
-# Conclusão Parcial do Dia (11/03/2026)
-
-Hoje o nosso grupo:
-
-*   Preparou os componentes
-*   Programou o Arduino
-*   Testou comunicação Serial
-*   Montou rede local com roteador
-*   Conectou o Arduino à rede via Ethernet
-*   Obteve IP, máscara, gateway e DNS
-*   Configurou reserva DHCP
-*   Testou comunicação via ping
+# **Dia 2 – 13/03/2026**
 
 ***
+
+# 8. Repetição da Montagem e Configuração
+
+Tudo foi remontado igual ao final do Dia 1:
+
+*   Ethernet Shield conectado
+*   Cabos de rede no roteador
+*   IP reservado novamente
+*   Teste de rede
+*   Instalação do app “Ping” no celular
+
+***
+
+# 9. Desenvolvimento do HTML no VS Code
+
+Configurações feitas:
+
+*   Salvamento automático
+*   Extensão Live Server instalada
+*   Criação de `index.html`
+
+→ **Aqui se encaixaria melhor a Imagem 12**
+
+Código inicial:
+
+
+
+→ **Aqui se encaixaria melhor a Imagem 13**
+
+***
+
+# 10. Programando o Arduino Web Server (Parte 1)
+
+Código inicial no Arduino:
+
+→ **Aqui se encaixaria melhor a Imagem 14**
+
+Explicações:
+
+*   `Ethernet.begin(mac);` → pega IP via DHCP
+*   `server.begin();` → inicia servidor web na porta 80
+*   `Ethernet.localIP()` → mostra o IP
+
+***
+
+# 11. Serial Monitor Mostrando IP
+
+→ **Aqui se encaixaria melhor a Imagem 15**
+
+O Arduino exibiu:
+
+    Arduino WEB Server
+    IP: 192.168.0.101
+
+Servidor funcionando.
+
+***
+
+# 12. Inserindo o HTML dentro do Arduino (PROGMEM)
+
+Criado:
+
+```cpp
+const char pagina[] PROGMEM = R"HTML(
+HTML AQUI
+)HTML";
+```
+
+→ **Aqui se encaixaria melhor a Imagem 16**
+
+***
+
+# 13. Colando o HTML dentro do Arduino
+
+Vocês copiaram o HTML do VS Code e colaram dentro do R"HTML()HTML".
+
+→ **Aqui se encaixaria melhor a Imagem 17**
+
+Isso permite ao Arduino enviar a página real para navegadores.
+
+***
+
+# 14. Programando o void loop() (Servidor HTTP Completo)
+
+→ **Aqui se encaixaria melhor a Imagem 18**
+
+Código explicado:
+
+*   `server.available()` → detecta navegador
+*   `HTTP/1.1 200 OK` → resposta padrão
+*   `Content-Type: text/html` → navegador entende que é HTML
+*   `client.print(FPSTR(pagina));` → envia o HTML do PROGMEM
+*   `client.stop();` → finaliza conexão
+
+***
+
+# 15. Resultado Final do Dia 2: SUCESSO
+
+→ **Aqui se encaixaria melhor a Imagem 19**
+
+O grupo digitou o IP do Arduino no:
+
+*   computador
+*   celular
+
+E a página **Hello Arduino** abriu nos dois dispositivos.
+
+Isso confirma:
+
+* Servidor funcionando\
+* HTML funcionando\
+* Rede funcionando\
+* Arduino como Web Server\
+* Código 100% correto
+
+***
+
+# Conclusão Parcial (Dias 1 e 2)
+
+Até agora o grupo:
+
+*   configurou rede IoT
+*   programou comunicação serial
+*   montou HTML
+*   inseriu HTML no Arduino
+*   criou servidor web
+*   enviou páginas HTML
+*   acessou a página pelo navegador
+
+O Arduino agora funciona como um **servidor web completo**, acessível por qualquer dispositivo na mesma rede.
+
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
