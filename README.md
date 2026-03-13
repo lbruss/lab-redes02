@@ -260,7 +260,7 @@ Código explicado:
 
 ***
 
-# 15. Resultado Final do Dia 2: SUCESSO
+# 15. Resultado Final do Dia 2
 
 ![](imagens/Imagem19.jpeg)
 
