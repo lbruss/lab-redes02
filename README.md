@@ -298,3 +298,21 @@ Até agora o grupo:
 O Arduino agora funciona como um **servidor web completo**, acessível por qualquer dispositivo na mesma rede.
 
 ***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
