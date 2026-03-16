@@ -8,6 +8,10 @@
 *   Daniel
 *   Ezequiel
 
+**Professor:**
+
+* José de Assis
+
 ***
 
 # **Dia 1 – 11/03/2026**
