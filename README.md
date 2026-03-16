@@ -37,10 +37,12 @@ Iniciar um projeto IoT com Arduino, envolvendo:
 ###  Placas e Módulos
 
 *   **Arduino UNO R3**\
-    → **Aqui se encaixaria melhor a Imagem 7**
+
+![Imagem7](https://github.com/user-attachments/assets/d4a12bda-50a0-40c2-8812-12282f81ab94)
 
 *   **Ethernet Shield W5100**\
-    → **Aqui se encaixaria melhor a Imagem 6**
+
+![Imagem6](https://github.com/user-attachments/assets/1e93061b-da0a-4760-9a01-4eedb9a66f51)
 
 ###  Sensores
 
@@ -57,7 +59,7 @@ Iniciar um projeto IoT com Arduino, envolvendo:
 *   2 Cabos de rede
 *   Roteador Wi-Fi
 
-→ **Aqui se encaixaria melhor a Imagem 1 e a Imagem 2**
+![Imagem2](https://github.com/user-attachments/assets/4ed9e256-7146-4935-ae40-5b524b4c6b76)
 
 ***
 
@@ -68,7 +70,7 @@ A interface do **Arduino IDE 2.2.6** foi aberta e explicada:
 *   `setup()` → roda uma vez (configuração inicial)
 *   `loop()` → roda para sempre (rotina)
 
-→ **Aqui se encaixaria melhor a Imagem 3**
+![Imagem3](https://github.com/user-attachments/assets/8b7d71d8-23e5-4f5b-9332-5d4565586953)
 
 Primeiro código (teste de comunicação serial):
 
@@ -95,7 +97,9 @@ O código foi testado:
 *   no simulador **Tinkercad**
 *   no **Arduino físico**
 
-→ **Aqui se encaixaria melhor a Imagem 4 e a Imagem 5**
+![Imagem4](https://github.com/user-attachments/assets/f8325ad3-2265-4c46-8381-335508b9af9b)
+
+![Imagem5](https://github.com/user-attachments/assets/ab6e7d6d-faa8-4210-a30e-35deb636ec42)
 
 Depois, o `println()` foi colocado dentro do `loop()`, fazendo repetir sem parar (aparece várias linhas no Serial Monitor).
 
@@ -114,7 +118,7 @@ A rede foi montada assim:
 *   PC → Roteador
 *   Roteador → Internet (rede SENAC pela porta WAN)
 
-→ **Aqui se encaixaria melhor a Imagem 8**
+![Imagem8](https://github.com/user-attachments/assets/f1e621db-3f49-405f-a12d-12ffaf8d6394)
 
 ***
 
@@ -129,11 +133,11 @@ Serial.println(Ethernet.gatewayIP());
 Serial.println(Ethernet.dnsServerIP());
 ```
 
-→ **Aqui se encaixaria melhor a Imagem 9**
+![Imagem9](https://github.com/user-attachments/assets/8adc083e-50e2-434a-914a-616cd70fde95)
 
 Saída no Serial Monitor:
 
-→ **Aqui se encaixaria melhor a Imagem 10**
+![Imagem10](https://github.com/user-attachments/assets/d185330a-b12e-497b-a460-0d962bd1bc24)
 
 Explicação simples:
 
@@ -151,7 +155,7 @@ Foi feito:
 *   **Reserva de IP (DHCP Reservation)** para o Arduino (para o IP não mudar)
 *   Teste de ping via CMD (PC → Arduino)
 
-→ **Aqui se encaixaria melhor a Imagem 11**
+![Imagem11](https://github.com/user-attachments/assets/256d409f-a7b7-473b-96ba-9f61616fe69f)
 
 Resultado:
 
@@ -185,11 +189,23 @@ Configurações feitas:
 *   Extensão **Live Server** instalada
 *   Criação/edição de `index.html`
 
-→ **Aqui se encaixaria melhor a Imagem 12**
+![Imagem12](https://github.com/user-attachments/assets/c2a5a797-70b5-4289-87d3-9a8fd115b758)
 
 HTML inicial (base da página):
 
-
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arduino Web SERVER</title>
+</head>
+<body>
+  <h1>Hello Arduino :)</h1>
+</body>
+</html>
+```
 
  Explicação (bem direta):
 
@@ -197,11 +213,11 @@ HTML inicial (base da página):
 *   `<body>` = palco (o que aparece)
 *   `<title>` = nome da aba e pode aparecer em pesquisas
 
-→ **Aqui se encaixaria melhor a Imagem 13**
+![Imagem13](https://github.com/user-attachments/assets/5f6263f2-2333-4934-bafb-e3a9c89f969a)
 
 Foi adicionado CSS para melhorar aparência:
 
-```
+```css
 <style>
   body {
     font-family: sans-serif;
@@ -226,7 +242,7 @@ Anotação correta:
 
 Código inicial no Arduino (servidor na porta 80):
 
-→ **Aqui se encaixaria melhor a Imagem 14**
+![Imagem14](https://github.com/user-attachments/assets/234939b6-2119-4e01-b20c-2cc9a5b8ae5e)
 
  Explicações principais:
 
@@ -238,7 +254,7 @@ Código inicial no Arduino (servidor na porta 80):
 
 # 11. Serial Monitor Mostrando IP
 
-→ **Aqui se encaixaria melhor a Imagem 15**
+![Imagem15](https://github.com/user-attachments/assets/d4c4f125-5565-4a8c-b79f-92ec94e37f50)
 
 O Arduino exibiu (exemplo):
 
@@ -263,7 +279,7 @@ HTML AQUI
 )HTML";
 ```
 
-→ **Aqui se encaixaria melhor a Imagem 16**
+![Imagem16](https://github.com/user-attachments/assets/0401c6a7-8791-4b5c-9916-0e46823a756c)
 
  Explicação simples:
 
@@ -276,13 +292,13 @@ HTML AQUI
 
 Vocês copiaram o HTML do VS Code e colaram dentro do `R"HTML()HTML"`.
 
-→ **Aqui se encaixaria melhor a Imagem 17**
+![Imagem17](https://github.com/user-attachments/assets/f36124ca-7769-4da3-96bc-b2de38674559)
 
 ***
 
 # 14. Programando o `void loop()` (Servidor HTTP Completo)
 
-→ **Aqui se encaixaria melhor a Imagem 18**
+![Imagem18](https://github.com/user-attachments/assets/2d40cce9-16ca-4492-b9d6-052d7b9c852d)
 
 O servidor passou a:
 
@@ -304,7 +320,7 @@ O servidor passou a:
 
 # 15. Resultado Final do Dia 2: SUCESSO
 
-→ **Aqui se encaixaria melhor a Imagem 19**
+![Imagem19](https://github.com/user-attachments/assets/fed8516c-f94a-4a1a-9eb0-1efc9a22a056)
 
 O grupo digitou o IP do Arduino no:
 
@@ -318,23 +334,6 @@ Isso confirma:
  HTML funcionando\
  Rede funcionando\
  Arduino como Web Server
-
-***
-
-#  Conclusão Parcial (Dias 1 e 2)
-
-Até aqui o grupo:
-
-*   configurou rede IoT
-*   programou comunicação serial
-*   montou HTML/CSS
-*   inseriu HTML no Arduino
-*   criou servidor web
-*   acessou a página no navegador (PC e celular)
-
-O Arduino passou a funcionar como um **servidor web** dentro da rede.
-
-***
 
 ***
 
@@ -354,15 +353,7 @@ Início do dia:
 *   montagem da rede novamente (roteador, cabos, shield, PC)
 *   acesso ao Arduino Web Server (sucesso do dia 2)
 
-→ **Aqui se encaixaria melhor a Imagem 20**
-
-Anotação do dia (correta):
-
-*   `...` cria um link clicável (no projeto, vira “botão” de comando).
-
- Analogia:
-
-*   Link = “mensagem pronta” enviada ao Arduino.
+![Imagem20](https://github.com/user-attachments/assets/5eb650e8-9e6c-40ed-8ab5-95053fe00e7c)
 
 ***
 
@@ -370,7 +361,7 @@ Anotação do dia (correta):
 
 Foi definido o LED no **pino 8** e testado primeiro como base (simulação).
 
-→ **Aqui se encaixaria melhor a Imagem 21**
+![Imagem21](https://github.com/user-attachments/assets/2ec8ed39-a3ef-4981-b027-f225f5869dee)
 
  Conceito rápido:
 
@@ -384,7 +375,7 @@ Foi definido o LED no **pino 8** e testado primeiro como base (simulação).
 
 Foi usado o **Fritzing** para documentar o circuito (serve para desenho/documentação, não simula).
 
-→ **Aqui se encaixaria melhor a Imagem 22**
+![Imagem22](https://github.com/user-attachments/assets/0da4d96a-2203-4a5d-a5c4-22c0fe225c2f)
 
  Analogia:
 
@@ -397,7 +388,7 @@ Foi usado o **Fritzing** para documentar o circuito (serve para desenho/document
 
 O circuito foi montado fisicamente no Arduino real, replicando o que foi planejado.
 
-→ **Aqui se encaixaria melhor a Imagem 23**
+![Imagem23](https://github.com/user-attachments/assets/e766c8f5-6106-42f8-933a-eba173461fd2)
 
  Explicação simples:
 
@@ -413,11 +404,11 @@ O HTML no VS Code foi alterado:
 *   antes: página simples
 *   agora: “Controle do LED” com ON e OFF
 
-→ **Aqui se encaixaria melhor a Imagem 24**
+![Imagem24](https://github.com/user-attachments/assets/c1f725ac-f562-426f-8cb9-ee96ab91f4a4)
 
 Depois, os links foram estilizados com CSS para parecer **botões** (melhor para toque no celular).
 
-→ **Aqui se encaixaria melhor a Imagem 25**
+![Imagem25](https://github.com/user-attachments/assets/d58d0b65-6426-466a-a0ed-a45b380e301d)
 
  Explicação do que mudou (bem direto):
 
@@ -426,7 +417,27 @@ Depois, os links foram estilizados com CSS para parecer **botões** (melhor para
 
 Exemplo do formato usado (compatível com o código do Arduino do Dia 3):
 
+```html
+<h2>Controle do LED</h2>
 
+<a href="/led-on" class="on">ON</a>
+<a href="/led-off" class="off">OFF</a>
+
+<style>
+  body { font-family: sans-serif; text-align: center; }
+
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+    margin: 10px;
+    display: inline-block;
+    color: #ffffff;
+  }
+  .on  { background-color: #3498db; }
+  .off { background-color: #7f8c8d; }
+</style>
+```
 
 Analogia:
 
@@ -441,8 +452,9 @@ O código do Arduino Web Server foi reaberto e:
 *   HTML antigo removido
 *   HTML novo (com botões) colocado no lugar dentro do PROGMEM
 
-→ **Aqui se encaixaria melhor a Imagem 26**\
-→ **Aqui se encaixaria melhor a Imagem 27**
+![Imagem26](https://github.com/user-attachments/assets/e446dcdf-8161-4443-93e5-64ab6983fb35)
+
+![Imagem27](https://github.com/user-attachments/assets/9e28925f-30f2-4d04-bfb0-29f20eb6282a)
 
 ***
 
@@ -450,7 +462,7 @@ O código do Arduino Web Server foi reaberto e:
 
 Foi alterado o título para “Arduino IoT”.
 
-→ **Aqui se encaixaria melhor a Imagem 28**
+![Imagem28](https://github.com/user-attachments/assets/70c7120c-158e-4d3f-aba8-45dcd7cf3e33)
 
 ***
 
@@ -458,7 +470,7 @@ Foi alterado o título para “Arduino IoT”.
 
 O trecho antigo que só “lia qualquer coisa” foi apagado para entrar um código capaz de **entender** se foi ON ou OFF.
 
-→ **Aqui se encaixaria melhor a Imagem 29**
+![Imagem29](https://github.com/user-attachments/assets/64dd4888-7af6-4920-aea9-0c02ba4651e3)
 
 Analogia:
 
@@ -482,7 +494,7 @@ pinMode(led, OUTPUT);
 
 Depois, foi colocado o novo código no lugar do trecho apagado:
 
-→ **Aqui se encaixaria melhor a Imagem 30**
+![Imagem30](https://github.com/user-attachments/assets/ac72268a-e80c-4cf8-9ec5-79117cf11150)
 
 Lógica do código (explicação simples):
 
@@ -492,7 +504,7 @@ Lógica do código (explicação simples):
 
 Trecho (forma equivalente ao que vocês usaram):
 
-```cpp
+```c++
 String request = "";
 
 while (client.available()) {
@@ -521,7 +533,7 @@ Depois disso, vocês enviaram o código para o Arduino (upload).
 
 # 25. Resultado Final do Dia 3: SUCESSO (controle pelo celular)
 
-→ **Aqui se encaixaria melhor a Imagem 31**
+![Imagem31](https://github.com/user-attachments/assets/916ddacc-d101-43d5-8220-1fb9962098cb)
 
 Objetivo atingido:
 
@@ -544,7 +556,6 @@ Até agora o grupo:
 *   acessou a página no PC e no celular
 *   e finalmente controlou um **LED real** via navegador (ON/OFF)
 
-Ou seja: vocês fizeram IoT de verdade — interface web → rede → ação física.
+Ou seja: foi feito IoT de verdade — interface web → rede → ação física.
 
 ***
-
