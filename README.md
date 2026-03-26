@@ -2,6 +2,8 @@
 
 # # Laboratório de IoT 01 – Arduino Web Server + Controle de LED (ON/OFF) – Documentação (Dias 1, 2 e 3 - 11,13,16/03/2026)**
 
+> Documentação extensa
+
 **Integrantes do grupo:**
 
 *   Bruss Loza
