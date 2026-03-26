@@ -1,6 +1,6 @@
 ![GitHub License](https://img.shields.io/github/license/lbruss/lab-redes02)
 
-# # Laboratório de IoT 01 – Arduino Web Server + Controle de LED (ON/OFF) – Documentação (Dias 1, 2 e 3 - 11,13,16/03/2026)**
+# # Laboratório de IoT 01 – Arduino Web Server + Controle de LED (ON/OFF) – Documentação (Dias 1, 2 e 3 - 11,13,16/03/2026)
 
 > Documentação extensa
 
